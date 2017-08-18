@@ -22,8 +22,8 @@ class UseSlideTabBarViewController: UIViewController, SlideTabBarDelegate {
         slideTabBar0.backgroundColor = UIColor.white
         slideTabBar0.font = UIFont.systemFont(ofSize: 14)
         slideTabBar0.titleColor = UIColor(red: 102 / 255.0, green: 102 / 255.0, blue: 102 / 255.0, alpha: 1.0)
-        slideTabBar0.selectedTitleColor = themeColor
-        slideTabBar0.slideColor = themeColor
+        slideTabBar0.selectedTitleColor = UIColor(red: 0.0, green: 131 / 255.0, blue: 251 / 255.0, alpha: 1.0)
+        slideTabBar0.slideColor = UIColor(red: 0.0, green: 131 / 255.0, blue: 251 / 255.0, alpha: 1.0)
         // 其他属性设置完毕后调用 resetting
         slideTabBar0.resetting(titles: ["标签 1", "标签 2", "标签 3", "标签 4"])
         slideTabBar0.delegate = self

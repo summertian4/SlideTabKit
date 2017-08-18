@@ -31,7 +31,7 @@ open class SlideTabBar: UIView {
             configTitlesColor()
         }
     }
-    open var selectedTitleColor: UIColor = themeColor {
+    open var selectedTitleColor: UIColor = UIColor(red: 0.0, green: 131 / 255.0, blue: 251 / 255.0, alpha: 1.0) {
         didSet {
             configTitlesColor()
         }
@@ -43,7 +43,7 @@ open class SlideTabBar: UIView {
     open private(set) var barItems: [UIView] = []
     open weak var delegate: SlideTabBarDelegate?
 
-    open var slideColor: UIColor = themeColor {
+    open var slideColor: UIColor = UIColor(red: 0.0, green: 131 / 255.0, blue: 251 / 255.0, alpha: 1.0) {
         didSet {
             slideView.backgroundColor = slideColor
         }
