@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name         = "SlideTabKit"
-  s.version      = "0.1.0"
+  s.version      = "0.1.1"
   s.summary      = "Simple and easy to use tools of slide tab / 简单易用的滑动标签栏工具"
   s.license      = { :type => "MIT", :file => "LICENSE" }
 
