@@ -4,32 +4,30 @@
 
 ![](SlideTabKit.png)
 
-# Introduction 
+# 简介 
 
-> [中文介绍](README_ZH.md)
+> [English Introduction](README.md)
 
 ![](res/SlideTabKit-04.png)
 
-SlideTabKit is a simple and easy to use tools of slide tab.
+SlideTabKit 简单易用的滑动标签栏工具，『标签栏工具』和『分页工具』和可以组合使用也可以拆分使用。
 
-"Slide Tab Tool" and "Paging tool" can be used in combination or split.
-
-# Install
+# 安装
 
 ```
 pod 'SlideTabKit'
 ```
 
-# Example
+# 示例使用
 
-## Use the SlideTabKit
+## 使用 SlideTabKit 组合 Kit
 
 ![](res/SlideTabKit-01.gif)
 
 ```swift
 var slideTabKit: SlideTabKit = SlideTabKit()
 var vcs: [UIViewController] = []
-var titles: [String] = ["Tab 0", "Tab 1", "Tab 2", "Tab 3"]
+var titles: [String] = ["标签 0", "标签 1", "标签 2", "标签 3"]
 
 override func viewDidLoad() {
     super.viewDidLoad()
@@ -58,7 +56,7 @@ override func viewDidLoad() {
 }
 ```
 
-## Use SlideTabBar alone
+## 单独使用 SlideTabBar
 
 ![](res/SlideTabKit-03.gif)
 
@@ -72,7 +70,7 @@ override func viewDidLoad() {
     // 设置 slideTabBar
     self.view.addSubview(slideTabBar0)
     // 其他属性设置完毕后调用 resetting
-    slideTabBar0.resetting(titles: ["Tab 1", "Tab 2", "Tab 3", "Tab 4"])
+    slideTabBar0.resetting(titles: ["标签 1", "标签 2", "标签 3", "标签 4"])
     slideTabBar0.delegate = self
 
     slideTabBar0.snp.makeConstraints { (make) in
@@ -83,9 +81,9 @@ override func viewDidLoad() {
 }
 ```
 
-In addition to using text to initialize the style, also support custom style.
+除了使用文字来初始化样式，也支持完全自定义 TabView 的样式。
 
-## Use SlideScrollView alone
+## 单独使用 SlideScrollView
 
 ![](res/SlideTabKit-02.gif)
 
@@ -117,23 +115,24 @@ override func viewDidLoad() {
 
 # Demo
 
-It is recommended to download the [Demo](Demo) to see how to use SlideTabKit.
+**建议您直接下载 [Demo](Demo) 工程查看 SlideTabKit 的各种使用姿势**
 
-# Feature
+# 功能
 
-- [x] "Slide Tab Tool" and "Paging tool" used in combination
-- [x] Use SlideTabBar alone
-- [x] Use paging tool alone
-- [ ] The text on the tab bar fades
+- [x] 『标签栏 & 分页工具』组合工具
+- [x] 『标签栏』单独使用
+- [x] 『分页工具』单独使用
+- [ ] 标签栏文字颜色渐变
 
 
 # License
 
-SlideTabKit use [GNU GENERAL PUBLIC LICENSE Version 3](LICENSE)
+SlideTabKit 使用 [GNU General Public License v3.0](LICENSE)
 
-# Feedback
+# 反馈
 
-If there are any suggestions, pleas send an email to <coderfish@163.com>, and also welcome to my [blog](http://zhoulingyu.com) to discuss. Learning together~
+如果有什么修改建议，可以发送邮件到 <coderfish@163.com>，也欢迎到我的[博客](http://zhoulingyu.com)一起讨论学习哟~
+
 
 
 
