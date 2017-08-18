@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import LPDBPublicModule
 
 public protocol SlideScrollViewDelegate: class {
     func slideScrollView(_ slideScrollView: SlideScrollView, showPage index: Int)
@@ -73,7 +72,7 @@ open class SlideScrollView: UIView, UIScrollViewDelegate {
     }
 
     open func showPage(index: Int) {
-        let offset = CGPoint(x: CGFloat(index) *  mainScroll.lpd.width, y: 0)
+        let offset = CGPoint(x: CGFloat(index) *  mainScroll.fkit.width, y: 0)
         mainScroll.setContentOffset(offset, animated: true)
     }
 
@@ -87,7 +86,7 @@ open class SlideScrollView: UIView, UIScrollViewDelegate {
     }
 
     public func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        let page = Int(mainScroll.contentOffset.x / mainScroll.lpd.width);
+        let page = Int(mainScroll.contentOffset.x / mainScroll.fkit.width);
         self.delegate?.slideScrollView(self, showPage: page)
     }
 }

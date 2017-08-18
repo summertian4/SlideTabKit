@@ -8,6 +8,8 @@
 
 import UIKit
 
+let themeColor = UIColor(red: 0.0, green: 131 / 255.0, blue: 251 / 255.0, alpha: 1.0)
+
 public protocol SlideTabKitDelegate: class {
     func slideTabKit(_ slideTabKit: SlideTabKit, didShowPage index: Int)
     func slideTabKit(_ slideTabKit: SlideTabKit, progress: CGFloat)

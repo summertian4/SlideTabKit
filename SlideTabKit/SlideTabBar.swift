@@ -8,6 +8,7 @@
 
 import UIKit
 import SnapKit
+import FrameKit
 
 public protocol SlideTabBarDelegate: class {
     func slideTabBar(_ slideTabBar: SlideTabBar, barItemDidClicked index: Int, barItem: UIView)
@@ -30,7 +31,7 @@ open class SlideTabBar: UIView {
             configTitlesColor()
         }
     }
-    open var selectedTitleColor: UIColor = UIColor.themeColor {
+    open var selectedTitleColor: UIColor = themeColor {
         didSet {
             configTitlesColor()
         }
@@ -42,7 +43,7 @@ open class SlideTabBar: UIView {
     open private(set) var barItems: [UIView] = []
     open weak var delegate: SlideTabBarDelegate?
 
-    open var slideColor: UIColor = UIColor.themeColor {
+    open var slideColor: UIColor = themeColor {
         didSet {
             slideView.backgroundColor = slideColor
         }
@@ -275,7 +276,7 @@ open class SlideTabBar: UIView {
             assertionFailure("SlideTabBar 至少需要一个 barItem")
             return
         }
-        let length = barItems.count == 1 ? 0 : progress * self.lpd.width * CGFloat(barItems.count - 1) / CGFloat(barItems.count)
+        let length = barItems.count == 1 ? 0 : progress * self.fkit.width * CGFloat(barItems.count - 1) / CGFloat(barItems.count)
         slideView.snp.remakeConstraints { (make) in
             make.centerX.equalTo(barItems.first!).offset(length)
             make.bottom.equalTo(self).offset(slideViewBottomOffest)
@@ -289,7 +290,7 @@ open class SlideTabBar: UIView {
         slideView.backgroundColor = slideColor
         slideView.snp.remakeConstraints { (make) in
             make.centerX.equalTo(barItems[selectedIndex])
-            make.bottom.equalTo(self).constraint
+            make.bottom.equalTo(self)
             make.size.equalTo(self.slideSize)
         }
     }
