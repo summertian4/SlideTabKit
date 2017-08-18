@@ -1,0 +1,6 @@
+framework module FrameKit {
+  umbrella header "FrameKit-umbrella.h"
+
+  export *
+  module * { export * }
+}
